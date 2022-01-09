@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<modules>
+		<module>TadukooUltimatePojo</module>
+	</modules>
+	<parent>
+		<groupId>com.github.tadukoo.maven</groupId>
+		<artifactId>TadukooMavenViewPOM</artifactId>
+		<version>0.3.1-Alpha</version>
+	</parent>
+	<groupId>com.github.tadukoo.combos</groupId>
+	<artifactId>TadukooCombosParent</artifactId>
+	<version>0.1-Alpha-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<description>Utilities combining various Tadukooverse projects</description>
+	<properties>
+		<!-- Info -->
+		<shortName>TadukooCombos</shortName>
+		<tadukoo.view.version>0.3.5-Alpha-SNAPSHOT</tadukoo.view.version>
+		<tadukoo.parsing.version>0.3.3-Alpha-SNAPSHOT</tadukoo.parsing.version>
+		<tadukoo.database.version>0.3.1-Alpha-SNAPSHOT</tadukoo.database.version>
+		
+		<!-- Tadukoo Parsing Info -->
+		<tadukoo.parsing.groupID>com.github.tadukoo.parsing</tadukoo.parsing.groupID>
+		<tadukoo.parsing.parsing.artifactID>TadukooParsing</tadukoo.parsing.parsing.artifactID>
+		<tadukoo.parsing.json.artifactID>TadukooJSON</tadukoo.parsing.json.artifactID>
+		<tadukoo.parsing.fileformat.artifactID>TadukooFileFormat</tadukoo.parsing.fileformat.artifactID>
+		
+		<!-- Tadukoo Database Info -->
+		<tadukoo.database.groupID>com.github.tadukoo.database</tadukoo.database.groupID>
+		<tadukoo.database.mysql.artifactID>TadukooMySQL</tadukoo.database.mysql.artifactID>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- Tadukoo Parsing dependencies -->
+			<dependency>
+				<groupId>${tadukoo.parsing.groupID}</groupId>
+				<artifactId>TadukooParsingParent</artifactId>
+				<version>${tadukoo.parsing.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- Tadukoo Database dependencies -->
+			<dependency>
+				<groupId>${tadukoo.database.groupID}</groupId>
+				<artifactId>TadukooDatabaseParent</artifactId>
+				<version>${tadukoo.database.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
