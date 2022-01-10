@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooMavenViewPOM</artifactId>
-		<version>0.3.1-Alpha</version>
+		<version>0.4-Alpha-SNAPSHOT</version>
 	</parent>
 	<groupId>com.github.tadukoo.combos</groupId>
 	<artifactId>TadukooCombosParent</artifactId>
